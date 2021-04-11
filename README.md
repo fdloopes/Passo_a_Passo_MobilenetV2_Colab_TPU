@@ -22,3 +22,10 @@
 - Para permitir que a TPU do google colab tenha acesso ao seu bucket é necessário adicionar permissão para o membro ```allAuthenticatedUsers``` com papel de ```administrador do storage```, então é importante se certificar que este projeto/bucket seja exclusivamente para essa tarefa, evitando assim comprometer a segurança de outros projetos/buckets.
 
 - Além disso, é importante lembrar de alterar o tipo do ambiente de execução no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```MobilenetV2_TPU_Train``` e GPU para o arquivo ```MobilenetV2_Predict```.
+
+- Outra questão importante é que mesmo se você tiver definido o nome de seu projeto e/ou bucket com letras em caixa alta, é importante passar os nomes em caixa baixa onde for requisitado dentro do aquivos do google colab.
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/15859532/114289220-808f5080-9a4c-11eb-93da-6d9c1ef61fd5.png"/><br/>
+    <em>Definição das variaveis de projeto e bucket</em>
+</p>
+
