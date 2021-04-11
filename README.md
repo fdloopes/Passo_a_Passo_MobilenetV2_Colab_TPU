@@ -15,5 +15,10 @@
 - Outro passo importante é disponibilizar o dataset em algum local que permita acesso via google colab, por exemplo: github, bitbucket, google drive, etc. No arquivo ```MobilenetV2_TPU_Train``` existe uma sessão específica para conectar ao google drive, então, por facilidade, recomendo gerar um zip do dataset e upar para o seu drive.
 - Também existe a possibilidade de upar o dataset diretamente para a instância do google colab, contudo o upload para o ```colab``` costuma ser mais lento e se, por alguma eventualidade, você for desconectado, pode acontecer de ter que fazer todo proccesso novamente.
 - E há ainda uma terceira possibilidade, que seria gerar os arquivos ```record``` para o Tensorflow localmente e enviar estes para o seu bucket no google cloud juntamente com o arquivo contendo as classes disponível em ```dataset/data```.
-- Fique a vontade para utilizar o método que preferir, porém aqui será utilizada a opção do google drive.
+- Fique a vontade para utilizar o método que preferir, porém aqui será abordada a opção com google drive.
 
+<h2>Considerações extras</h2>
+
+- Para permitir que a TPU do google colab tenha acesso ao seu bucket é necessário adicionar permissão para o membro ```allAuthenticatedUsers``` com papel de ```administrador do storage```, então é importante se certificar que este projeto/bucket seja exclusivamente para essa tarefa, evitando assim comprometer a segurança de outros projetos/buckets.
+
+- Além disso, é importante lembrar de alterar o tipo do ambiente de execução no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```MobilenetV2_TPU_Train``` e GPU para o arquivo ```MobilenetV2_Predict```.
