@@ -2,7 +2,7 @@
 
 - Este repositório é destinado ao armazenamento de um passo a passo para utilizar a MobilenetV2 com a API de detecção de objetos do Tensorflow, aproveitando as TPUs disponibilizadas no Google Colab para o treinamento.
 
-- Está dividido em um diretório contendo o dataset utilizado no passo a passo e dois arquivos no formato do jupyter notebook(ipynb), onde um dos aquivos é destinado ao treinamento do modelo ```(MobilenetV2_TPU_Train)``` e o outro ao uso do modelo já treinado ```(MobilenetV2_Predict)```. 
+- Está dividido em um diretório contendo o dataset utilizado no passo a passo e dois arquivos no formato do jupyter notebook(ipynb), onde um dos aquivos é destinado ao treinamento do modelo ```(TPU_Train)``` e o outro ao uso do modelo já treinado ```(GPU_Predict)```. 
 
 - A escolha por separar em dois arquivos diferentes foi por poder utilizar os dois ao mesmo tempo em instâncias diferentes de maquinas oferecidas pelo Colab, visto que realizar inferências utilizando o modelo treinado não é prático com TPUs, assim acaba sendo necessário fazer a troca para o uso de GPU, o que gera uma perda das configurações já realizadas para o ambiente com uso de TPU.
 
@@ -28,7 +28,7 @@
 
 - Para permitir que a TPU do google colab tenha acesso ao seu bucket é necessário adicionar permissão para o membro ```allAuthenticatedUsers``` com papel de ```administrador do storage```, então é importante se certificar que este projeto/bucket seja exclusivamente para essa tarefa, evitando assim comprometer a segurança de outros projetos/buckets.
 
-- Além disso, é importante lembrar de alterar o ```tipo do ambiente de execução``` no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```MobilenetV2_TPU_Train``` e GPU para o arquivo ```MobilenetV2_Predict```. Para isso basta ir no menu ```Ambiente de execução/Alterar o tipo de ambiente de execução```.
+- Além disso, é importante lembrar de alterar o ```tipo do ambiente de execução``` no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```TPU_Train``` e GPU para o arquivo ```GPU_Predict```. Para isso basta ir no menu ```Ambiente de execução/Alterar o tipo de ambiente de execução```.
 
 - Outra questão importante é que mesmo se você tiver definido o nome de seu projeto e/ou bucket com letras em caixa alta, é importante passar os nomes em caixa baixa onde for requisitado dentro dos arquivos.
 
@@ -53,7 +53,7 @@
 
 <h2>Resultados esperados</h2>
 
-- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```MobilenetV2_TPU_Train``` então provavelmente terá resultados semelhantes aos seguintes.
+- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```TPU_Train``` então provavelmente terá resultados semelhantes aos seguintes.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114345116-83b33b00-9b37-11eb-9300-284b3a5f0e3e.png"/><br/>
@@ -67,7 +67,7 @@
 
 - Possivelmente o tensorboard selecionará para você a mesma imagem que está acima para avaliar seus resultados.
 
-- Se estiver satisfeito com os resultados alcançados pode utilizar o arquivo ```MobilenetV2_Predict``` para exportar seu modelo treinado e realizar inferências em imagens diferentes que tiver.
+- Se estiver satisfeito com os resultados alcançados pode utilizar o arquivo ```GPU_Predict``` para exportar seu modelo treinado e realizar inferências em imagens diferentes que tiver.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114348567-1bffee80-9b3d-11eb-9ba7-9f67aa6ce67e.png"/><br/>
