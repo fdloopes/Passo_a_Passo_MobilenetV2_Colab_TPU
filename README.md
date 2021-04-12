@@ -17,7 +17,7 @@
 - Com a conta de faturamento já ativada, vamos criar um ```bucket```, para isso é possível seguir este tutorial disponibilizado pelo Google: https://cloud.google.com/storage/docs/creating-buckets.
 > Obs: É essencial realizar a criação e uso de buckets, pois é necessário os arquivos estarem disponiveis em um bucket do Google Cloud para podermos utilizar as TPUs no Colab.
 
-- Outro passo importante é disponibilizar o dataset em algum local que permita acesso via Google Colab, por exemplo: github, bitbucket, google drive, etc. No arquivo ```MobilenetV2_TPU_Train``` existe uma sessão específica para conectar ao google drive, então, por facilidade, recomendo gerar um zip do dataset e upar para o seu drive.
+- Outro passo importante é disponibilizar o dataset em algum local que permita acesso via Google Colab, por exemplo: github, bitbucket, google drive, etc. No arquivo ```TPU_Train``` existe uma sessão específica para conectar ao google drive, então, por facilidade, recomendo gerar um zip do dataset e upar para o seu drive.
 
 - Também existe a possibilidade de upar o dataset diretamente para a instância do google colab, contudo o upload para o ```Colab``` costuma ser mais lento e se, por alguma eventualidade, você for desconectado, pode acontecer de ter que fazer todo processo novamente.
 
@@ -60,6 +60,8 @@
     <em>Loss Total do treinamento</em>
 </p><br/>
 
+- Na imagem acima temos em azul escuro a Loss de treinamento próximo a 0,2 e em azul claro temos a Loss de avaliação com valor próximo a 0,65.
+
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114346772-5b790b80-9b3a-11eb-940c-a931f4dfd7af.png"/><br/>
     <em>Avaliação lado a lado. A esquerda inferência do modelo e a direita imagem rotulada</em>
@@ -78,3 +80,9 @@
     <img src="https://user-images.githubusercontent.com/15859532/114348570-1dc9b200-9b3d-11eb-9448-62b1998ca9bd.png"/><br/>
     <em>Inferência em uma imagem com um cachorro</em>
 </p>
+
+<h2>Final</h2>
+
+- Este repositório deve passar por atualizações rotineiras e seguirá sempre de forma pública.
+
+- Espero que com este passo a passo consiga facilitar o uso de TPUs no Colab para mais pessoas, pois apesar de o uso de TPUs no Colab possuir bastante documentação, se trata de uma tecnologia relativamente nova e quando necessitei utilizar tive algumas dificuldades por conta de erros pouco expostos ainda pela comunidade. Dito isso, não hesite de entrar em contato pra tirar dúvidas, relatar algum erro ou até mesmo para trocar conhecimento. 
