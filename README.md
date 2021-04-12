@@ -2,7 +2,7 @@
 
 - Este repositório é destinado ao armazenamento de um passo a passo para utilizar a MobilenetV2 com a API de detecção de objetos do Tensorflow, aproveitando as TPUs disponibilizadas no Google Colab para o treinamento.
 
-- Está dividido em um diretório contendo o dataset utilizado no passo a passo e dois arquivos no formato do jupyter notebook(ipynb), onde um dos aquivos é destinado ao treinamento do modelo ```(MobilenetV2_TPU_Train)``` e o outro ao uso do modelo já treinado ```(MobilenetV2_Predict)```. 
+- Está dividido em um diretório contendo o dataset utilizado no passo a passo e dois arquivos no formato do jupyter notebook(ipynb), onde um dos aquivos é destinado ao treinamento do modelo ```(TPU_Train)``` e o outro ao uso do modelo já treinado ```(GPU_Predict)```. 
 
 - A escolha por separar em dois arquivos diferentes foi por poder utilizar os dois ao mesmo tempo em instâncias diferentes de maquinas oferecidas pelo Colab, visto que realizar inferências utilizando o modelo treinado não é prático com TPUs, assim acaba sendo necessário fazer a troca para o uso de GPU, o que gera uma perda das configurações já realizadas para o ambiente com uso de TPU.
 
@@ -17,7 +17,7 @@
 - Com a conta de faturamento já ativada, vamos criar um ```bucket```, para isso é possível seguir este tutorial disponibilizado pelo Google: https://cloud.google.com/storage/docs/creating-buckets.
 > Obs: É essencial realizar a criação e uso de buckets, pois é necessário os arquivos estarem disponiveis em um bucket do Google Cloud para podermos utilizar as TPUs no Colab.
 
-- Outro passo importante é disponibilizar o dataset em algum local que permita acesso via Google Colab, por exemplo: github, bitbucket, google drive, etc. No arquivo ```MobilenetV2_TPU_Train``` existe uma sessão específica para conectar ao google drive, então, por facilidade, recomendo gerar um zip do dataset e upar para o seu drive.
+- Outro passo importante é disponibilizar o dataset em algum local que permita acesso via Google Colab, por exemplo: github, bitbucket, google drive, etc. No arquivo ```TPU_Train``` existe uma sessão específica para conectar ao google drive, então, por facilidade, recomendo gerar um zip do dataset e upar para o seu drive.
 
 - Também existe a possibilidade de upar o dataset diretamente para a instância do google colab, contudo o upload para o ```Colab``` costuma ser mais lento e se, por alguma eventualidade, você for desconectado, pode acontecer de ter que fazer todo processo novamente.
 
@@ -28,7 +28,7 @@
 
 - Para permitir que a TPU do google colab tenha acesso ao seu bucket é necessário adicionar permissão para o membro ```allAuthenticatedUsers``` com papel de ```administrador do storage```, então é importante se certificar que este projeto/bucket seja exclusivamente para essa tarefa, evitando assim comprometer a segurança de outros projetos/buckets.
 
-- Além disso, é importante lembrar de alterar o ```tipo do ambiente de execução``` no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```MobilenetV2_TPU_Train``` e GPU para o arquivo ```MobilenetV2_Predict```. Para isso basta ir no menu ```Ambiente de execução/Alterar o tipo de ambiente de execução```.
+- Além disso, é importante lembrar de alterar o ```tipo do ambiente de execução``` no google colab ao carregar algum dos arquivos, sendo TPU para o arquivo ```TPU_Train``` e GPU para o arquivo ```GPU_Predict```. Para isso basta ir no menu ```Ambiente de execução/Alterar o tipo de ambiente de execução```.
 
 - Outra questão importante é que mesmo se você tiver definido o nome de seu projeto e/ou bucket com letras em caixa alta, é importante passar os nomes em caixa baixa onde for requisitado dentro dos arquivos.
 
@@ -53,12 +53,14 @@
 
 <h2>Resultados esperados</h2>
 
-- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```MobilenetV2_TPU_Train``` então provavelmente terá resultados semelhantes aos seguintes.
+- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```TPU_Train``` então provavelmente terá resultados semelhantes aos seguintes.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114345116-83b33b00-9b37-11eb-9300-284b3a5f0e3e.png"/><br/>
     <em>Loss Total do treinamento</em>
 </p><br/>
+
+- Na imagem acima temos em azul escuro a Loss de treinamento próximo a 0,2 e em azul claro temos a Loss de avaliação com valor próximo a 0,65.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114346772-5b790b80-9b3a-11eb-940c-a931f4dfd7af.png"/><br/>
@@ -67,7 +69,7 @@
 
 - Possivelmente o tensorboard selecionará para você a mesma imagem que está acima para avaliar seus resultados.
 
-- Se estiver satisfeito com os resultados alcançados pode utilizar o arquivo ```MobilenetV2_Predict``` para exportar seu modelo treinado e realizar inferências em imagens diferentes que tiver.
+- Se estiver satisfeito com os resultados alcançados pode utilizar o arquivo ```GPU_Predict``` para exportar seu modelo treinado e realizar inferências em imagens diferentes que tiver.
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/15859532/114348567-1bffee80-9b3d-11eb-9ba7-9f67aa6ce67e.png"/><br/>
@@ -78,3 +80,9 @@
     <img src="https://user-images.githubusercontent.com/15859532/114348570-1dc9b200-9b3d-11eb-9448-62b1998ca9bd.png"/><br/>
     <em>Inferência em uma imagem com um cachorro</em>
 </p>
+
+<h2>Final</h2>
+
+- Este repositório deve passar por atualizações rotineiras e seguirá sempre de forma pública.
+
+- Espero que com este passo a passo consiga facilitar o uso de TPUs no Colab para mais pessoas, pois apesar de o uso de TPUs no Colab possuir bastante documentação, se trata de uma tecnologia relativamente nova e quando necessitei utilizar tive algumas dificuldades por conta de erros pouco expostos ainda pela comunidade. Dito isso, não hesite de entrar em contato pra tirar dúvidas, relatar algum erro ou até mesmo para trocar conhecimento. 
