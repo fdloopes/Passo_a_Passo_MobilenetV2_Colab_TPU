@@ -53,5 +53,28 @@
 
 <h2>Resultados esperados</h2>
 
-- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```MobilenetV2_TPU_Train``` então provavelmente terá resultados semelhante aos seguintes.
+- Se você conseguiu chegar até aqui e conseguiu executar todas as sessões do arquivo ```MobilenetV2_TPU_Train``` então provavelmente terá resultados semelhantes aos seguintes.
 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/15859532/114345116-83b33b00-9b37-11eb-9300-284b3a5f0e3e.png"/><br/>
+    <em>Loss Total do treinamento</em>
+</p><br/>
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/15859532/114346772-5b790b80-9b3a-11eb-940c-a931f4dfd7af.png"/><br/>
+    <em>Avaliação lado a lado. A esquerda inferência do modelo e a direita imagem rotulada</em>
+</p>
+
+- Possivelmente o tensorboard selecionará para você a mesma imagem que está acima para avaliar seus resultados.
+
+- Se estiver satisfeito com os resultados alcançados pode utilizar o arquivo ```MobilenetV2_Predict``` para exportar seu modelo treinado e realizar inferências em imagens diferentes que tiver.
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/15859532/114348567-1bffee80-9b3d-11eb-9ba7-9f67aa6ce67e.png"/><br/>
+    <em>Inferência em uma imagem com um gato</em>
+</p>
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/15859532/114348570-1dc9b200-9b3d-11eb-9448-62b1998ca9bd.png"/><br/>
+    <em>Inferência em uma imagem com um cachorro</em>
+</p>
