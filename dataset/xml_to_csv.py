@@ -4,6 +4,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 
+
 def xml_to_csv(path):
     xml_list = []
     for xml_file in glob.glob(path + '/*.xml'):
