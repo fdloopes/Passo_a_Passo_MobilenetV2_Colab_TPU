@@ -28,5 +28,6 @@
     <img src="https://user-images.githubusercontent.com/15859532/114289220-808f5080-9a4c-11eb-93da-6d9c1ef61fd5.png"/><br/>
     <em>Definição das variaveis de projeto e bucket</em>
 </p>
+
 - No caso, se esse fosse o nome do seu projeto e bucket ficaria assim:
 > PROJECT = "your_project_gcs_here" e YOUR_GCS_BUCKET = "your_gcs_bucket_here"
