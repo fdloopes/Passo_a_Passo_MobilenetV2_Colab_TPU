@@ -85,4 +85,6 @@
 
 - Este repositório deve passar por atualizações rotineiras e seguirá sempre de forma pública.
 
-- Espero que com este passo a passo consiga facilitar o uso de TPUs no Colab para mais pessoas, pois apesar de o uso de TPUs no Colab possuir bastante documentação, se trata de uma tecnologia relativamente nova e quando necessitei utilizar tive algumas dificuldades por conta de erros pouco expostos ainda pela comunidade. Dito isso, não hesite de entrar em contato pra tirar dúvidas, relatar algum erro ou até mesmo para trocar conhecimento. 
+- Espero que com este passo a passo consiga facilitar o uso de TPUs no Colab para mais pessoas, pois apesar de o uso de TPUs no Colab possuir bastante documentação, se trata de uma tecnologia relativamente nova e quando necessitei utilizar tive algumas dificuldades por conta de erros pouco expostos ainda pela comunidade. 
+ 
+- Dito isso, não hesite de entrar em contato pra tirar dúvidas, relatar algum erro ou até mesmo para trocar conhecimento. 
